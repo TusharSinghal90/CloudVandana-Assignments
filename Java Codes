@@ -17,3 +17,89 @@ class Shuffle {
         System.out.print(arr[i]+" ");
     }
 }
+
+
+
+B. Eneter a Roman Number as input and convert it to an integer.(ex IX=9)
+
+import java.util.*;
+class RomanToInteger {
+    public static void main(String[] args) {
+   Scanner sc=new Scanner(System.in);
+String roman=sc.nextLine();
+
+	int number = 0;
+	for (int i = 0; i < roman.length(); i++) {
+		char c = roman.charAt(i);
+		switch (c) {
+		case 'I':
+			number = (i != roman.length() - 1 && (roman.charAt(i + 1) == 'V' || roman.charAt(i + 1) == 'X'))
+					? number - 1
+					: number + 1;
+			break;
+		case 'V':
+			number += 5;
+			break;
+		case 'X':
+			number = (i != roman.length() - 1 && (roman.charAt(i + 1) == 'L' || roman.charAt(i + 1) == 'C'))
+					? number - 10
+					: number + 10;
+			break;
+		case 'L':
+			number += 50;
+			break;
+		case 'C':
+			number = (i != roman.length() - 1 && (roman.charAt(i + 1) == 'D' || roman.charAt(i + 1) == 'M'))
+					? number - 100
+					: number + 100;
+			break;
+		case 'D':
+			number += 500;
+			break;
+		case 'M':
+			number += 1000;
+			break;
+		}
+	}
+
+	System.out.println(number); 
+}}
+
+
+
+C. Check if the input is pangram or not.
+
+import java.util.*;
+class Pangram {
+    public static void main(String[] args) {
+   Scanner sc=new Scanner(System.in);
+String str=sc.nextLine();
+boolean[] mark=new boolean[26];
+str=str.toLowerCase();  
+for(int i=0;i<str.length();i++){
+    if(Character.isLetter(str.charAt(i))){
+    int letter = str.charAt(i) - 'a';  
+mark[letter] = true;  
+}}
+
+int flag=1;
+for (int i = 0; i < 26; i++)   
+{  
+if (!mark[i]){
+    flag=0;
+    break;
+}}
+
+if(flag==0)
+System.out.println("Sentence is not a pangram");
+else
+System.out.println("Sentence is a pangram");
+}
+}
+
+
+
+
+
+
+
