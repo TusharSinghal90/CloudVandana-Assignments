@@ -1,46 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
-  </head>
-  <body>
-    <section>
-      <div class="container">
-        <div class="calculator">
-          <div class="disp">
-            <div class="display">
-              <div class="display-1"></div>
-              <div class="display-2"></div>
-              <div class="temp-result"></div>
+<head>
+    <link rel="stylesheet" href="survey.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Survey Form</title>
+</head>
+<body>
+    
+    <body>
+        <h1>Customer Survey Form</h1>
+    
+        <!-- Create Form -->
+        <form id="form">
+    
+            <!-- Details -->
+            <div class="first-inp">
+            <div class="form-control">
+                
+                <label for="name" id="label-name">
+                    Name
+                </label>
+    
+                <!-- Input Type Text -->
+                <input type="text"
+                    id="name"
+                     />
             </div>
-            <div class="handle button all-clear">AC</div>
-          </div>
-
-          <div class="all_button">
-            <div class="button number">9</div>
-            <div class="button number">8</div>
-            <div class="button number">7</div>
-            <div class="alt button operation">+</div>
-            <div class="button number">4</div>
-            <div class="button number">5</div>
-            <div class="button number">6</div>
-            <div class="alt button operation">-</div>
-            <div class="button number">1</div>
-            <div class="button number">2</div>
-            <div class="button number">3</div>
-            <div class="alt button operation">/</div>
-            <div class="button number dot">.</div>
-            <div class="button btn-0 number">0</div>
-            <div class="button equal">=</div>
-            <div class="alt button operation">*</div>
-            <!-- <div class="button all-clear">AC</div> -->
-          </div>
+    
+            <div class="form-control">
+                <label for="email" id="label-email">
+                    Email
+                </label>
+    
+                <!-- Input Type Email-->
+                <input type="email"
+                    id="email"
+                     />
+            </div>
         </div>
-      </div>
-    </section>
-    <script src="logic.js"></script>
-  </body>
+    
+            
+    
+        
+    
+            <div class="form-control">
+                <label>
+                    Is this first time You are using our products and service?
+                </label>
+                <div class="second-inp">
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                        id="recommed-1"
+                        name="recommed">Yes</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                        id="recommed-2"
+                        name="recommed">No</input>
+                </label>
+                
+            </div>
+        </div>
+    
+            <div class="form-control">
+                <label>Would you suggestion to your friend and colleague?
+                    
+                </label>
+                <!-- Input Type Checkbox -->
+                <div class="second-inp">
+                    <!-- Input Type Radio Button -->
+                    <label for="recommed-1">
+                        <input type="radio"
+                            id="recommed-1"
+                            name="recommed">Yes</input>
+                    </label>
+                    <label for="recommed-2">
+                        <input type="radio"
+                            id="recommed-2"
+                            name="recommed">No</input>
+                    </label>
+                    
+                </div>
+            </div>
+            <div class="form-control">
+                <label for="comment">
+                    How satisfied are you with our company overall?
+                </label>
+                <div class="third-inp">
+                    <!-- Input Type Radio Button -->
+                    <label for="recommed-1">
+                        <input type="radio"
+                            id="recommed-1"
+                            name="recommed">Satisfied</input>
+                    </label>
+                    <label for="recommed-2">
+                        <input type="radio"
+                            id="recommed-2"
+                            name="recommed">Undecided</input>
+                    </label>
+                    <label for="recommed-2">
+                        <input type="radio"
+                            id="recommed-2"
+                            name="recommed">Unsatisfied</input>
+                    </label>
+                    
+                </div>
+            </div>
+
+            <div class="form-control">
+                <label for="comment">
+                    Do you have suggestion to improve our service?
+                </label>
+                <!-- multi-line text input control -->
+                <textarea name="comment" id="comment"
+                    placeholder="Enter your comment here">
+                </textarea>
+            </div>
+    
+            <!-- Multi-line Text Input Control -->
+            <button type="submit" value="submit">
+                Submit
+            </button>
+        </form>
+    </body>
+    </html>
+     
+</body>
 </html>
